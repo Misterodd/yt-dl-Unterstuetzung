@@ -1,0 +1,6 @@
+#URL1
+#URL2
+#usw. z.B.
+https://www.zdf.de/comedy/die-anstalt/die-anstalt-clip-1-154.html
+https://www.zdf.de/comedy/die-anstalt/die-anstalt-clip-2-154.html
+https://www.youtube.com/watch?v=JtUAAXe_0VI
