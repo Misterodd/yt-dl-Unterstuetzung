@@ -62,7 +62,7 @@ if %chISlink%==j set txt="" && set link=%chklink%
 echo "Gut jetzt haben wir die mögliche Formate, möchtest du einfach das beste nehmen? Geht für mehrere Platformen."
 set /P ch="[J]a oder [N]ein? " 
 if /I "%ch%"=="J" goto best
-echo "OK dann Brauche ich die Videospur." & echo "bitte wähle das format mp4 oder webm, findest du bei 'extension'.
+echo "OK dann Brauche ich die Videospur." & echo "bitte wähle das format mp4 oder webm, findest du bei 'extension'."
 echo "Trage hier den gewünschten 'format code' ein, es geht auch 'bestvideo[ext=mp4]' oder 'bestvideo[ext=webm]'"
 echo "Wichtig ist hier, dass nur audio mit den selben Formaten genutzt werden können, also mp4 und m4a oder webm."
 set /P vd="Trage nun den 'format code' ein "
