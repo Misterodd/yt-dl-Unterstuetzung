@@ -44,12 +44,12 @@ goto ende
 	
 :bestMP4
 echo "Lade jetzt die ganzen Daten in mp4. Das dauert etwas..."
-0youtube-dl -r %dg% %q% --console-title --no-warnings -u mamertens99 -p Leon1950 --mark-watched -i -f bestvideo[ext=mp4]+bestaudio[ext=mp4]/bestvideo[ext=mp4]+bestaudio[ext=m4a] --all-subs --embed-subs --youtube-skip-dash-manifest  --merge-output-format mp4 %txt% %link%
+0youtube-dl -r %dg% %q% --console-title --no-warnings --mark-watched -i -f bestvideo[ext=mp4]+bestaudio[ext=mp4]/bestvideo[ext=mp4]+bestaudio[ext=m4a] --all-subs --embed-subs --youtube-skip-dash-manifest  --merge-output-format mp4 %txt% %link%
 goto ende
 
 :bestWEBM
 echo "Lade jetzt die ganzen Daten in webm. Das dauert etwas..."
-0youtube-dl -r %dg% %q% --console-title --no-warnings -u mamertens99 -p Leon1950 --mark-watched -i -f bestvideo[ext=webm]+bestaudio[ext=webm] --all-subs --embed-subs --youtube-skip-dash-manifest  --merge-output-format webm %txt% %link%
+0youtube-dl -r %dg% %q% --console-title --no-warnings --mark-watched -i -f bestvideo[ext=webm]+bestaudio[ext=webm] --all-subs --embed-subs --youtube-skip-dash-manifest  --merge-output-format webm %txt% %link%
 goto ende
 
 :manual
@@ -73,21 +73,21 @@ if %fm%==webm set ad=bestaudio[ext=webm] && goto j1
 set ad=bestaudio[ext=mp4]/bestvideo[ext=mp4]+bestaudio[ext=m4a]
 :j1
 echo es wurde das Audioformat %ad% gewählt.
-0youtube-dl -r %dg%K %q% --console-title -u mamertens99 -p Leon1950 --mark-watched --no-warnings -i -f %ad%+%ad% --all-subs --embed-subs  --merge-output-format %fm% %txt% %link%
+0youtube-dl -r %dg%K %q% --console-title  --mark-watched --no-warnings -i -f %ad%+%ad% --all-subs --embed-subs  --merge-output-format %fm% %txt% %link%
 goto ende
 
 :best
-0youtube-dl -r %dg%K %q% -i -u mamertens99 -p Leon1950 --mark-watched --all-subs --console-title --embed-subs -f best %txt% %link%
+0youtube-dl -r %dg%K %q% -i --mark-watched --all-subs --console-title --embed-subs -f best %txt% %link%
 
 goto ende
 
 :auto
-0youtube-dl -r 800K -q --console-title -u mamertens99 -p Leon1950 --mark-watched --no-warnings -i -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo[ext=mp4]+bestaudio[ext=mp4] --all-subs --embed-subs --youtube-skip-dash-manifest  --merge-output-format mp4 -a 0VidTHIS.txt
+0youtube-dl -r 800K -q --console-title --mark-watched --no-warnings -i -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo[ext=mp4]+bestaudio[ext=mp4] --all-subs --embed-subs --youtube-skip-dash-manifest  --merge-output-format mp4 -a 0VidTHIS.txt
 goto finende
 
 :music
 echo "Ich suche in 0vids.txt in diesem Ordner noch Videos" && pause
-0youtube-dl -r %dg%K -q -x --embed-thumbnail -u mamertens99 -p Leon1950 --mark-watched --add-metadata --console-title --audio-quality 0 --geo-bypass -i -o %(autonumber)s-%(title)s_by_%(uploader)s.%(ext)s  --audio-format mp3 -a 0vids.txt 
+0youtube-dl -r %dg%K -q -x --embed-thumbnail --mark-watched --add-metadata --console-title --audio-quality 0 --geo-bypass -i -o %(autonumber)s-%(title)s_by_%(uploader)s.%(ext)s  --audio-format mp3 -a 0vids.txt 
 goto ende
 
 :help
